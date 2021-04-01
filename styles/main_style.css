@@ -1,0 +1,376 @@
+/******** CSS for all page ************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/******** font size ************/
+html {
+    font-size: 62.5%;
+  }
+ 
+  
+/******** STYLE for body ************/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/*******Typography***********/
+h1 {
+  font-weight: 400;
+  color: #143774;
+  font-size: 3rem;
+}
+
+.subtitle {
+  margin-bottom: 2em;
+  display: block;
+  font-weight: 600;
+  color: #0c8cd1;
+  font-size: 1.4rem;
+}
+
+/*******Header style***********/
+
+header {
+  text-align: center;
+  padding: 2em 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/*******NAVIGATION style***********/
+
+nav {
+  --nav-main-color: #707070;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* center across main axis */
+}
+
+nav li {
+  margin: 0 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--nav-main-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.25em 0;
+
+  transition: .5s;
+}
+
+/*******NAV style***********/
+nav a:hover,
+nav a:focus {
+  color: #0c8cd1;
+  border-bottom-color: currentColor; /* same as element color */
+}
+
+/************Border for curr page style***********/
+.current-page {
+  border-bottom: 1px solid var(--nav-main-color);
+}
+
+/************IMG style***********/
+.auto_1{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    height: 70vh;
+    position: relative;
+    text-align: center;
+    color:rgba(46, 53, 79, 0.767);
+    font-size: 7rem;
+  
+}
+/************IMG  background style***********/
+.back_ground{
+    display: block;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*******Buttom style***********/
+.button:hover,
+.button:focus {
+  color:#942610;
+  opacity: 0.7;
+}
+.button {
+    display: border-box;
+    position: absolute;
+    border: 3px solid #2E354F;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    font-weight: 900;
+    text-decoration: none;
+    text-align: center;
+    color: #2E354F;
+    background-color: #FFF;
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 1.5rem;
+}
+/*******Text style inside the picture***********/
+.centered {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ 
+/*******Main style***********/
+main {
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main p:first-child {
+  font-size: 3rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/************Columns text & photo style FLEX***********/
+div.flex-3-col {
+  width: 100%;
+  margin-top: -40px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #2E354F;
+
+  /* flexbox setup */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1, .col-2, .col-3 {
+  flex-basis: calc(100% / 3); /* change to other size */
+  padding: 10px 20px;
+  text-align: center;
+}
+.flex-3-col p{
+  margin-top: 10px;
+}
+/************Video style***********/
+.video-text{
+ display: flex;
+  margin: 20px 20px;
+}
+iframe, article{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: calc(100%/2);
+ 
+}
+iframe{
+  border: 4px solid  #2E354F;;
+  margin: 30px 30px;
+}
+/************Text near video  style***********/
+article {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+}
+
+/************Footer style***********/
+.footerr{
+  height: 200px;
+  width: 100%;
+  background-color: #f0f0f0;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 60px 0px;
+}
+/* STYLES SPECIFIC TO FOOTER  */
+footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: #070617;
+ 
+}
+
+footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: rgba(255,255,255,0.2);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .col ul li {
+  color: #999999;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+.footer .col a{
+  text-decoration: none;
+  color: #999999;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
+
+.footer .col ul li a:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+}
+.clearfix {
+  clear: both;
+}
+/************Sotial network style***********/
+.facebook, .instagram, .twitter, .youtube{
+ float: right;
+ margin-top: 150px  !important;
+ margin: 5px 5px;
+}
+
+/************Responsive style***********/
+@media (max-width:650px){
+  html{
+    font-size: 65%;
+  }
+ 
+  h1,h2,h3 {
+     margin: .5em 0;
+  }
+
+  section{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .video-text{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  iframe{
+    width: 90%;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.footer, .contain, .col{
+  width: 200px;
+    font-size: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sotial_net{
+    display: flex;
+    width: 50%;
+    margin: 3px 3px !important;
+
+  }
+
+}
+
+@media (max-width:440px){
+  html{
+    font-size: 40%;
+  }
+ 
+  h1,h2,h3 {
+     margin: .3em 0;
+  }
+
+  section{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .video-text{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  iframe{
+    width: 90%;
+    margin: 3px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.footer, .contain, .col{
+  width: 200px;
+    font-size: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sotial_net{
+    display: flex;
+    width: 50%;
+    margin: 3px 3px !important;
+    
+  }
+}
